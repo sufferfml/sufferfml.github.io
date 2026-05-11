@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UsageWatch Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for UsageWatch.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #10140f;
+      --card: #191f17;
+      --text: #f4f0de;
+      --muted: #bcb59a;
+      --accent: #d8a13a;
+      --line: rgba(244, 240, 222, 0.16);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 17px/1.65 ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(216, 161, 58, 0.20), transparent 34rem),
+        linear-gradient(135deg, #10140f 0%, #151a13 48%, #0b100d 100%);
+      color: var(--text);
+    }
+    main {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0;
+    }
+    article {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: color-mix(in srgb, var(--card) 88%, transparent);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      padding: clamp(24px, 5vw, 56px);
+    }
+    h1, h2 { line-height: 1.12; margin: 0 0 16px; }
+    h1 { font-size: clamp(2.3rem, 7vw, 4.8rem); letter-spacing: -0.05em; }
+    h2 { color: var(--accent); font-size: clamp(1.35rem, 3vw, 2rem); margin-top: 40px; }
+    p, li { color: var(--muted); }
+    p.updated { color: var(--text); font-weight: 700; margin-bottom: 32px; }
+    a { color: var(--accent); text-underline-offset: 0.18em; }
+    ul { padding-left: 1.2rem; }
+    footer { color: var(--muted); margin-top: 28px; text-align: center; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>UsageWatch Privacy Policy</h1>
+      <p class="updated">Last updated: May 11, 2026</p>
+
+      <p>UsageWatch is a companion app that helps you view Claude Code usage snapshots from your own Mac on your iPhone, iPad, widgets, and Apple Watch.</p>
+
+      <h2>Data Usage</h2>
+      <p>In the default local setup, UsageWatch does not collect personal data for the developer. Usage snapshots are fetched from the UsageWatch CLI running on your Mac and stored locally on your devices so the app, widgets, and watch app can display them.</p>
+      <p>Usage snapshots may include:</p>
+      <ul>
+        <li>Claude Code usage percentages and reset times.</li>
+        <li>Session cost or token metrics when available.</li>
+        <li>Your Mac device name as reported by the CLI.</li>
+        <li>Refresh timestamps.</li>
+      </ul>
+
+      <h2>Camera</h2>
+      <p>UsageWatch uses the camera only to scan the pairing QR code printed by the Mac CLI. Camera frames are not stored or sent to the developer.</p>
+
+      <h2>Local Network</h2>
+      <p>UsageWatch uses local network access to connect to the UsageWatch CLI on your Mac over the same Wi-Fi network.</p>
+
+      <h2>Developer Collection</h2>
+      <p>The default local Mac-to-iPhone/iPad flow does not send usage snapshots to the developer. If a hosted relay is offered later, this policy must be updated before that relay is used in production.</p>
+
+      <h2>Third Parties</h2>
+      <p>UsageWatch displays data produced by Claude Code. UsageWatch is not affiliated with Anthropic, Claude, Apple, or OpenAI.</p>
+
+      <h2>Contact</h2>
+      <p>For support or privacy questions, open an issue at <a href="https://github.com/sufferfml/Usagewatch/issues">github.com/sufferfml/Usagewatch/issues</a>.</p>
+    </article>
+    <footer><a href="./">UsageWatch</a></footer>
+  </main>
+</body>
+</html>
