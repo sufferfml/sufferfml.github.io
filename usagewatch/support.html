@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UsageWatch Support</title>
+  <meta name="description" content="Support information for UsageWatch.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #10140f;
+      --card: #191f17;
+      --text: #f4f0de;
+      --muted: #bcb59a;
+      --accent: #d8a13a;
+      --line: rgba(244, 240, 222, 0.16);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 17px/1.65 ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      background: linear-gradient(135deg, #10140f 0%, #151a13 50%, #0b100d 100%);
+      color: var(--text);
+    }
+    main {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0;
+    }
+    article {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: color-mix(in srgb, var(--card) 88%, transparent);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      padding: clamp(24px, 5vw, 56px);
+    }
+    h1, h2 { line-height: 1.12; margin: 0 0 16px; }
+    h1 { font-size: clamp(2.3rem, 7vw, 4.8rem); letter-spacing: -0.04em; }
+    h2 { color: var(--accent); font-size: clamp(1.35rem, 3vw, 2rem); margin-top: 40px; }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); text-underline-offset: 0.18em; }
+    code {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1px 5px;
+      color: var(--text);
+      background: rgba(0, 0, 0, 0.22);
+      font: 0.95rem/1.45 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    ol { padding-left: 1.4rem; }
+    footer { color: var(--muted); margin-top: 28px; text-align: center; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+<h1>UsageWatch Support</h1>
+<p>UsageWatch displays Codex and Claude Code quota readings on iPhone, widgets and Apple Watch.</p>
+<h2>Connect your services</h2>
+<p>On the startup page, sign in with Apple or choose Skip. Skipping does not create a cloud account. Before your first connection, choose Apple sign-in or continued anonymous use after reading the recovery warning. Link Apple before signing out of an anonymous account if you want to recover your connections on another phone.</p>
+<p>In Settings, connect Codex through OpenAI’s official device-code authorization in the system browser. Connect Claude through its official authorization page, copy the returned authorization code, and paste it into the app’s authorization page. Your provider account must support the quota information you want to view. No Mac companion is required.</p>
+<p>Quota readings are collected in isolated cloud runtimes. Codex displays remaining quota; Claude displays used quota. Windows are shown only when reported by the service. Refresh can queue a cloud query; failed queries retain the previous reading and its timestamp.</p>
+<h2>Widgets and Apple Watch</h2>
+<p>Add UsageWatch widgets from the Home Screen or StandBy gallery. Install the companion app from the paired iPhone’s Watch app, then select UsageWatch in a supported watch-face complication position. In UsageWatch Settings, the refresh icon beside Show connected devices reconnects widget and Watch access. Updates follow Apple’s background scheduling.</p>
+<h2>Manage your account</h2>
+<p>Disconnect a provider in Settings to remove its online connection data. Settings → Account → Delete account permanently deletes your UsageWatch account, connections, quota data and device access after confirmation. It does not delete your OpenAI or Anthropic account. Sign out ends this phone’s session and leaves the cloud account intact.</p>
+<h2>Contact</h2>
+<p>For support, bug reports or privacy questions, email <a href="mailto:previbe.ai@gmail.com">previbe.ai@gmail.com</a>. Never include passwords, authorization codes or access tokens.</p>
+<p>For privacy questions, see the <a href="./privacy-policy.html">UsageWatch Privacy Policy</a>.</p>
+</article>
+    <footer><a href="./privacy-policy.html">Privacy Policy</a></footer>
+  </main>
+</body>
+</html>
