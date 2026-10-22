@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UsageWatch Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for UsageWatch.">
+  <title>UsageWatch 隐私政策 / Privacy Policy</title>
+  <meta name="description" content="UsageWatch 如何处理账号、额度、登录和购买数据。How UsageWatch handles account, quota, sign-in, and purchase data.">
   <style>
     :root {
       color-scheme: light dark;
@@ -44,35 +44,139 @@
     a { color: var(--accent); text-underline-offset: 0.18em; }
     ul { padding-left: 1.2rem; }
     footer { color: var(--muted); margin-top: 28px; text-align: center; font-size: 0.9rem; }
+  
+    h3 { color: var(--accent); line-height: 1.3; margin-top: 28px; }
+    nav { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 32px; }
+    nav a { padding: 4px 0; }
+    section { scroll-margin-top: 24px; }
+    p, li, a { overflow-wrap: anywhere; }
+    ul, ol { padding-left: 1.4rem; }
+    hr { border: 0; border-top: 1px solid var(--line); margin: 56px 0; }
   </style>
 </head>
 <body>
   <main>
     <article>
+      <nav aria-label="Language / 语言"><a href="#zh" lang="zh-Hans">中文</a><a href="#en" lang="en">English</a></nav>
+<section id="zh" lang="zh-Hans">
+<h1>UsageWatch 隐私政策</h1>
+<p>最后更新：2026 年 10 月 22 日。本政策说明 UsageWatch 0.2 如何处理通过手机和服务器查询 Codex、Claude Code 额度时产生的数据。</p>
+<h2>先了解这几点</h2>
+<ul>
+<li>无需登录 UsageWatch，也能连接服务、订阅和恢复订阅。需要使用服务器功能时，App 会按需创建游客账号。</li>
+<li>游客账号的数据也会保存在服务器上，并非只存在手机里。</li>
+<li>为自动查询额度，服务器会保存额度数据和必要的登录信息。登录信息会加密保存。</li>
+<li>恢复订阅只恢复监控权限，不会带回旧账号的连接和历史记录。</li>
+<li>UsageWatch 不含广告，不进行跨 App 跟踪。</li>
+</ul>
+<h2>账号与设备数据</h2>
+<p>服务器会处理你的 UsageWatch 账号标识、设备连接及名称、额度百分比、重置时间、查询时间，以及用于向设备发送通知的登记信息。这些数据与 UsageWatch 账号关联，用来在你的设备之间同步额度。</p>
+<p>你可以在欢迎页跳过登录。跳过这一步本身不会创建服务器账号；首次连接 Codex 或 Claude，或进行购买、恢复订阅等需要账号的操作时，App 会按需准备游客账号。</p>
+<p>只有在你选择使用 Apple 账号登录 UsageWatch 或绑定游客账号时，我们才会处理用于该登录的 Apple 账号标识。App Store 购买和恢复使用的交易验证是另一项操作，见下方“购买与恢复订阅”。</p>
+<p>稍后绑定 Apple 登录，会保留当前账号的连接和设备。若这个 Apple 账号已绑定另一个 UsageWatch 账号，两个账号不会自动合并或覆盖。</p>
+<h2>连接 Codex 或 Claude 后会处理什么</h2>
+<p>服务商的登录信息可能包含姓名、邮箱、账号和组织标识、订阅方案、订阅状态及相关账单信息。这些信息来自官方登录配置，用于登录和查询额度，不用于广告或营销。UsageWatch 不会收到你的银行卡或银行账号资料。</p>
+<p>Codex 登录信息、Claude 官方命令行工具保存的登录信息，以及使用 Apple 登录时取得的续期登录信息，会加密保存在服务器数据库中。加密密钥另存于服务器的密钥配置中。用于管理 UsageWatch 账号、续期登录和只读查看数据的访问令牌，以哈希形式保存在数据库中，不直接保存原令牌。</p>
+<p>服务商的登录授权并不是只能查询额度的专用授权。UsageWatch 将自己的操作限制为登录、查询额度和退出，不会为了测量额度而向模型提问或启动模型任务。</p>
+<h2>官方登录页面与服务器查询</h2>
+<p>连接 Claude 时，iPhone 会在系统浏览器中打开 Claude 官方登录页面。密码填写在官方页面，不会输入到 UsageWatch。你将官方页面返回的授权码粘贴到 UsageWatch，以完成同一次服务器登录。授权码只用于完成该次登录，不写入普通日志。</p>
+<p>服务器在隔离环境中处理官方工具的登录信息及其所需的账号资料，并通过官方工具的额度查询功能读取数据。可重复使用的基础镜像不含任何用户的登录信息。App 收到的是整理后的额度数据，不会收到可用于再次登录服务商的原始登录资料。</p>
+<p>Claude 连接不需要读取或导入你的 Mac 文件、钥匙串、对话、源代码、本地会话历史或终端状态报告。服务器上的额度数据不包含对话内容或代码仓库路径。旧版电脑配对和上传记录仅属于历史功能；当前连接通过手机完成官方授权。</p>
+<h2>购买与恢复订阅</h2>
+<p>订阅功能启用时，由 Apple 处理购买和付款资料。UsageWatch 会接收并验证交易标识、订阅商品、续费和到期信息、撤销或付款宽限状态，以及用于关联购买与 UsageWatch 账号的标识。这些记录用于提供一个或两个账号的监控权限、确认购买归属，以及防止同一份订阅被多个账号重复使用，不用于广告。</p>
+<p>购买和恢复过程中，App 会向官方 UsageWatch 服务器发送 Apple 签名的验证资料。为验证当前 App Store 身份，也可能处理 Apple 提供的 App 交易标识与购买环境。这些验证资料不会通过 App 的购买流程发送给自建服务器。</p>
+<p>你可以主动点击“恢复订阅”，在当前 UsageWatch 账号恢复可监控的账号数量。服务器会验证 Apple 交易资料和原购买归属。恢复不会移动旧账号的连接、登录信息或历史记录；若订阅正在另一个 UsageWatch 账号使用，恢复后，原账号中由这份订阅提供的监控会暂停。未经你主动恢复，后台检查不会把订阅权限转给新账号。</p>
+<p>找回旧连接和历史记录是另一项操作：原账号需要事先绑定 Apple 登录，再使用当时绑定的 Apple 账号登录 UsageWatch。未绑定的游客账号在丢失登录信息后无法通过 Apple 找回。App 不提供单独的找回代码。</p>
+<p>删除 UsageWatch 账号不会取消 App Store 订阅。请在 Apple 的订阅管理中另行管理或取消。账号删除后，服务器仍保留核对原购买归属所必需的交易记录、购买关联标识及通知去重标识；被删除的账号和原账号的使用权限关联会移除。这些保留记录用于验证交易、处理恢复和避免重复处理通知，不会重新建立已删除的账号或云端数据。你仍可在新游客账号主动恢复有效订阅的监控权限。Apple 根据自己的政策保留交易记录。</p>
+<h2>手机、小组件、Apple Watch 与通知</h2>
+<p>设备会缓存最近的额度数据。iPhone 的管理登录信息保存在 App 私有的系统钥匙串中；小组件与 Apple Watch 使用各自可撤销的只读访问信息。</p>
+<p>额度不足提醒需要你在 App 内主动开启，并允许 iOS 通知。Apple 推送通知服务会传递更新信号；开启提醒后，也会传递额度提醒文字。你可以在 App 中关闭通知。</p>
+<p>退出账号只会结束这台设备的访问，不会删除服务器账号。删除账号会永久移除 UsageWatch 账号、在线连接、额度数据及设备访问权限，并安排清理剩余的服务商和 Apple 登录信息；不会删除你的 OpenAI 或 Anthropic 账号。</p>
+<h2>数据保留多久</h2>
+<ul>
+<li><strong>最近的额度数据：</strong>服务器为每个连接保留最新一份额度数据。</li>
+<li><strong>登录尝试：</strong>Apple 登录验证请求五分钟后到期；服务商登录尝试按官方登录接口给出的时间到期。已到期的登录诊断和提醒记录，由定期清理任务在七天后移除。</li>
+<li><strong>Codex 用量日历：</strong>保留成功取得的 Codex 主周额度记录，包括所属连接、查询时间、已用百分比、周期标识和重置时间。超过 370 天的记录由定期任务分批移除。</li>
+</ul>
+<p>日历结合额度变化和公开重置公告估算每天的消耗，并显示表情。它不收集工作内容，也不直接测量工作时长。个人日历数据需要账号访问权限，不会发送给第三方重置公告来源，也不会加入普通通知文字。</p>
+<p>重新授权会开始一段独立的记录；断开 Codex 或删除 UsageWatch 账号会删除对应的在线历史。过去没有取得数据的日期无法补回。</p>
+<h2>长期未使用的游客账号</h2>
+<p>只有同时满足以下条件，定期清理任务才会移除游客账号的在线数据：尚未绑定 Apple、超过七天没有查看账号数据，并且没有有效的账号管理登录信息。仅有服务器持续查询额度，不会阻止这类清理。</p>
+<p>这并不表示丢失手机后七天就会删除账号。服务器保存的续期登录许可可在闲置 180 天内保持有效；小组件或 Apple Watch 的活动也可能延长其所属登录许可的有效期。有有效管理登录信息、已绑定 Apple，或仍保留监控容量预留记录的账号，不属于上述自动清理范围。</p>
+<p>购买开始前的容量预留记录不会自动到期。即使购买被取消、等待批准或尚未完成，该记录也可能保留；它不代表已经付款，也不会单独授予订阅权限。普通个人账号仍可通过“删除账号”移除账号及其预留记录。在线数据移除后，剩余登录信息和运行环境会进入清理队列。</p>
+<h2>断开连接、删除与备份</h2>
+<p>断开连接会删除该连接的在线数据，并撤销 UsageWatch 对该连接的访问。删除账号会移除账号的在线数据和设备。需要在外部服务中完成的登录退出或运行环境清理，会排队执行；外部服务暂不可用时会重试。</p>
+<p>连接器退出会清除其使用的本地官方登录状态，但不保证 OpenAI 或 Anthropic 在所有地方都立即撤销此前签发的登录信息。你也可以在服务商的官方页面管理登录会话。</p>
+<p>临时查询环境不会自动生成文件系统快照，可重复使用的基础镜像不含用户登录信息。托管服务的备份可能在运营者配置的保留期内留存加密历史数据。删除在线数据不代表每份托管备份都立即移除；历史加密数据会随托管备份保留期结束而过期。若运营者从备份恢复数据，已完成的删除仍应保持有效。</p>
+<h2>数据在哪里处理</h2>
+<p>Vercel 托管 UsageWatch API 和隔离的服务商查询环境；Supabase 保存数据库。托管服务商按各自政策处理基础设施数据。</p>
+<p>如果你选择自建服务器，由你所选的服务器管理员运营该 API；当前 Claude 查询环境仍使用 Vercel Sandbox。</p>
+<h2>联系我们</h2>
+<p>UsageWatch 与 Apple、OpenAI 或 Anthropic 没有隶属关系。App 不含广告，不进行跨 App 跟踪。</p>
+<p>如需支持、咨询隐私事项或协助删除数据，请联系 <a href="mailto:previbe.ai@gmail.com">previbe.ai@gmail.com</a>。请勿发送访问令牌、授权码、密码或私人用量导出文件。</p>
+<p>查看<a href="./support.html">使用帮助</a>、<a href="./terms-of-use.html">服务条款</a>和<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 标准最终用户许可协议</a>。</p>
+</section>
+<hr>
+<section id="en" lang="en">
 <h1>UsageWatch Privacy Policy</h1>
-<p>Last updated: 2026-10-21. This policy describes UsageWatch 0.2, which synchronizes Codex and Claude Code quota through the UsageWatch cloud service.</p>
-<h2>Cloud mode</h2>
-<p>When you connect to a Usagewatch server, it processes your Usagewatch account identifier, named device connections, quota percentages, reset times, query times and push registration tokens. It processes an Apple account identifier only if you sign in with Apple or link Apple to an anonymous account. Quota data is linked to your account to synchronize your devices. Anonymous use still has a server-side identifier and does not keep quota data solely on the phone. Vercel hosts the API and isolated provider runtimes; Supabase stores the database. Hosting providers process infrastructure data under their own policies. A self-hosted API is operated by the server administrator you choose; the current Claude collector still uses Vercel Sandbox.</p>
-<p>Skipping the startup sign-in page does not create a server-side anonymous account. The app explains recovery limits when you connect a provider; continuing anonymously creates the account then. Linking Apple later adds its identity to the existing account while retaining connections and devices. A conflict with another Apple-linked account does not merge or overwrite either account.</p>
-<p>Official provider authentication state can include the provider account’s name, email address, account and organization identifiers, subscription plan/status and related billing metadata, because it preserves the provider CLI’s native login configuration. These fields are used for authentication and quota functionality, not advertising or marketing. UsageWatch does not receive your payment card or bank account details.</p>
-<p>Apple refresh credentials, when used, Codex login credentials and Claude&#x27;s native CLI authentication state are encrypted in the server database; encryption keys are held separately in server secrets. Usagewatch owner, refresh and viewer tokens are hashed at rest. Provider authorization is not a provider-issued read-only grant: Usagewatch restricts its own operations to authentication, quota reading and logout. The service does not start model tasks to measure usage.</p>
-<p>The iPhone opens Claude&#x27;s official authorization page in the system browser. The password is entered on the provider&#x27;s page, not into Usagewatch. The user returns the official authorization code through Usagewatch to complete the pending cloud CLI login; the code must be excluded from ordinary logs and retained only for completion of that attempt. The isolated runtime processes the resulting native CLI authentication state, including account metadata needed by the CLI, and reads its native <code>/usage</code> interface. Reusable base images contain no account credentials. Client responses contain normalized quota data, never native provider authentication state.</p>
-<p>The Claude connector does not require or import Mac files, Keychain entries, conversations, source code, local session history or status-line reports. Cloud quota snapshots have no conversation content or repository path. Old Mac pairing/upload records are historical; a new cloud connection requires official authorization on the phone.</p>
-<h2>App Store subscriptions</h2>
-<p>When subscriptions are enabled, Apple processes purchases and payment details. UsageWatch receives and verifies App Store transaction identifiers, the subscription product, renewal/expiry and revocation or billing-grace status, and a UUID linking the purchase to your UsageWatch account. These records are used to provide one or two cloud monitors and prevent the same purchase from being claimed by different accounts. They are not used for advertising. Signed transactions are sent only to the official UsageWatch cloud service; custom servers do not receive them through the app&#x27;s purchase flow.</p>
-<p>Deleting your UsageWatch account does not cancel an App Store subscription. Manage or cancel it through your Apple Account. Online connection and quota data are deleted as described below; the server retains a minimal purchase-binding record without its deleted UsageWatch owner link, plus notification identifiers needed for deduplication, to prevent a previously bound purchase from being reassigned. Automatic restoration to a different/new UsageWatch account is not supported; contact support about a purchase tied to a deleted account before starting another subscription. Apple retains its own transaction records under its policies.</p>
-<h2>Device storage and notifications</h2>
-<p>Devices cache quota snapshots. Management credentials remain in the iPhone application&#x27;s private Keychain; widgets and Watch receive separate revocable read credentials. Low-quota notifications require an explicit opt-in and iOS notification permission. APNs delivers update signals and, if enabled, quota alert text. Notifications can be disabled in the app.</p>
-<p>An unlinked anonymous account cannot be recovered through Apple after sign-out or loss of management credentials. Connecting again requires new provider authorization. Link Apple beforehand to enable recovery through Apple sign-in. The app does not issue a separate recovery code. Settings → Account includes Delete account, with a confirmation explaining that deletion is permanent. It deletes the UsageWatch account and its online connections, quota data and device access, and queues revocation of remaining provider and Apple credentials. It does not delete your OpenAI or Anthropic account. Sign out only revokes this device’s access; it does not delete your UsageWatch account.</p>
-<h2>Retention and deletion</h2>
-<p>The service keeps the latest snapshot for each connection and expiring authentication attempts/challenges. Apple login challenges expire after five minutes; provider attempts have the expiry returned by their login endpoint. Expired diagnostic login and alert records are removed after seven days by scheduled maintenance. Disconnecting removes online connection data and revokes Usagewatch access. Confirming Delete account in the iPhone app removes online account data and devices. Remaining provider credential/runtime cleanup is queued and retried when external services are unavailable.</p>
-<p>Servers with the reset calendar update also retain successful Codex main-weekly-quota observations, including the connection, collection time, used percentage, window identifier and reset time. Scheduled maintenance removes observations older than 370 days in bounded batches. The calendar combines these readings with public reset announcements to estimate daily quota consumption and display an emoji; it does not collect the content of your work or directly measure working hours. Personal calendar readings require your account's access credentials and are not sent to the third-party reset feed. Reauthorizing starts a separate history segment; disconnecting the Codex connection or deleting the UsageWatch account deletes its online quota history. Earlier dates without observations cannot be reconstructed. Historical observations are not included in ordinary notification text.</p>
-<p>Scheduled maintenance removes an anonymous account&#x27;s online data when it has no Apple identity, no dashboard read for over seven days, and no valid management credential. Provider collection alone does not prevent this cleanup. Losing a phone does not cause immediate deletion: its server-side refresh grant can remain valid for a 180-day idle period, and widget/Watch activity can extend the parent grant. Accounts with a valid management credential, linked Apple identity or retained cloud-monitoring capacity reservation are excluded. A capacity reservation has no automatic expiry and may remain after a subscription checkout is cancelled, pending or unfinished; it does not confirm payment or grant subscription access. Holders of ordinary personal accounts can still use Delete account, which also removes the reservation. Provider credential/runtime cleanup is queued after online data removal.</p>
-<p>Connector logout clears its local native login state; it is not a guarantee that OpenAI or Anthropic invalidates every previously issued token globally. Users may also manage sessions directly with their provider. Temporary provider sandboxes disable automatic filesystem snapshots and reusable base images contain no user credentials. Hosting backups can retain encrypted historical data until the operator&#x27;s configured retention expires. Deletion does not promise immediate removal from every hosting backup. Historical encrypted data expires with the hosting provider’s backup retention; deletion must remain effective if an operator restores a backup.</p>
+<p>Last updated: October 22, 2026. This policy explains how UsageWatch 0.2 handles data when your phone and our server check Codex and Claude Code quotas.</p>
+<h2>At a glance</h2>
+<ul>
+<li>You can connect services, subscribe, and restore a subscription without signing in to UsageWatch. The app creates a guest account when a server feature needs one.</li>
+<li>Guest data is also stored on the server, not only on your phone.</li>
+<li>To check quota automatically, the server stores quota data and the sign-in information it needs. Sign-in information is encrypted.</li>
+<li>Restoring a subscription restores monitoring access, not an old account’s connections or history.</li>
+<li>UsageWatch has no advertising or cross-app tracking.</li>
+</ul>
+<h2>Account and device data</h2>
+<p>The server processes your UsageWatch account identifier, device connections and names, quota percentages, reset times, query times, and the registration information needed to send notifications to your devices. This data is linked to your UsageWatch account to keep your devices in sync.</p>
+<p>You can skip sign-in on the welcome screen. Skipping alone does not create a server account. The app prepares a guest account when you first connect Codex or Claude, or take an account-dependent action such as purchasing or restoring a subscription.</p>
+<p>We process the Apple account identifier used for UsageWatch sign-in only when you choose Sign in with Apple or link a guest account. App Store purchase and restore verification is separate, as described under “Purchases and subscription restoration.”</p>
+<p>Linking Apple later keeps the current account’s connections and devices. If that Apple Account is already linked to another UsageWatch account, the accounts are not automatically merged or overwritten.</p>
+<h2>Data used to connect Codex or Claude</h2>
+<p>Official sign-in information may include your provider account’s name, email address, account and organization identifiers, subscription plan and status, and related billing information. These fields come from the official sign-in configuration and are used for authentication and quota features, not advertising or marketing. UsageWatch does not receive your payment card or bank account details.</p>
+<p>Codex sign-in information, the sign-in information stored by Claude’s official command-line tool, and refresh credentials obtained when you use Sign in with Apple are encrypted in the server database. Encryption keys are kept separately in server secrets. UsageWatch access tokens used for account management, sign-in renewal, and read-only viewing are stored as hashes, not as their original token values.</p>
+<p>Provider authorization is not a special grant that can only read quota. UsageWatch limits its own actions to signing in, checking quota, and signing out. It does not send prompts or start model tasks to measure quota.</p>
+<h2>Official sign-in pages and server checks</h2>
+<p>When connecting Claude, iPhone opens Claude’s official sign-in page in the system browser. You enter your password on the official page, not into UsageWatch. You paste the returned authorization code into UsageWatch to complete the same server sign-in attempt. The code is used only to finish that attempt and is excluded from ordinary logs.</p>
+<p>The server handles the official tool’s sign-in state and required account information in an isolated environment, then reads quota through the official tool’s quota feature. Reusable base images contain no user sign-in information. The app receives organized quota data, not the original credentials that could sign in to the provider again.</p>
+<p>The Claude connector does not read or import your Mac files, Keychain entries, conversations, source code, local session history, or terminal status reports. Server quota data contains no conversations or repository paths. Old computer pairing and upload records belong to historical features; current connections use official authorization on the phone.</p>
+<h2>Purchases and subscription restoration</h2>
+<p>When subscriptions are enabled, Apple handles purchases and payment details. UsageWatch receives and verifies transaction identifiers, the subscription product, renewal and expiry information, revocation or billing-grace status, and an identifier associating the purchase with your UsageWatch account. These records provide monitoring access for one or two accounts, establish purchase ownership, and prevent duplicate use of one subscription across accounts. They are not used for advertising.</p>
+<p>During purchase and restore, the app sends Apple-signed verification information to the official UsageWatch server. Verification of the current App Store identity may also process the app transaction identifier and purchase environment supplied by Apple. The app’s purchase flow does not send this verification information to custom servers.</p>
+<p>You can tap Restore subscription to restore the number of accounts you can monitor to the current UsageWatch account. The server verifies Apple transaction information and original purchase ownership. Restoring does not move the previous account’s connections, sign-in information, or history. If another UsageWatch account is using that subscription, restoring pauses the monitoring it provides on the previous account. Background checks do not transfer access to a new account without your explicit restore action.</p>
+<p>Recovering old connections and history is a separate action. The original account must already have been linked to Sign in with Apple; sign in to UsageWatch with the Apple Account used for that link. An unlinked guest account cannot be recovered through Apple after its sign-in information is lost. The app does not issue a separate recovery code.</p>
+<p>Deleting a UsageWatch account does not cancel an App Store subscription. Manage or cancel it separately through Apple’s subscription settings. After account deletion, the server retains the transaction records, purchase-association identifiers, and notification deduplication identifiers needed to check original purchase ownership. Links to the deleted account and its monitoring access are removed. Retained records verify transactions, process restores, and avoid handling a notification twice; they do not recreate a deleted account or its cloud data. You can still explicitly restore an active subscription’s monitoring access to a new guest account. Apple retains its own transaction records under its policies.</p>
+<h2>iPhone, widgets, Apple Watch, and notifications</h2>
+<p>Devices cache the most recent quota data. iPhone management sign-in information stays in the app’s private system Keychain. Widgets and Apple Watch use separate, revocable read-only access information.</p>
+<p>Low-quota alerts require you to turn them on in the app and allow iOS notifications. Apple Push Notification service delivers update signals and, when alerts are enabled, quota alert text. You can turn notifications off in the app.</p>
+<p>Signing out ends access on this device without deleting the server account. Deleting the account permanently removes your UsageWatch account, online connections, quota data, and device access, and schedules cleanup of remaining provider and Apple sign-in information. It does not delete your OpenAI or Anthropic account.</p>
+<h2>How long data is kept</h2>
+<ul>
+<li><strong>Latest quota data:</strong> The server keeps the latest quota data for each connection.</li>
+<li><strong>Sign-in attempts:</strong> Apple sign-in challenges expire after five minutes. Provider attempts expire at the time returned by the official sign-in endpoint. Expired diagnostic sign-in and alert records are removed after seven days by scheduled cleanup.</li>
+<li><strong>Codex usage calendar:</strong> The server keeps successfully collected Codex main-weekly-quota observations, including the connection, query time, used percentage, window identifier, and reset time. Scheduled cleanup removes observations older than 370 days in batches.</li>
+</ul>
+<p>The calendar combines quota changes and public reset announcements to estimate daily consumption and show an emoji. It does not collect work content or directly measure working hours. Personal calendar data requires account access, is not sent to the third-party reset feed, and is not included in ordinary notification text.</p>
+<p>Reauthorizing starts a separate history segment. Disconnecting Codex or deleting the UsageWatch account deletes its related online history. Past dates without collected data cannot be reconstructed.</p>
+<h2>Guest accounts left unused</h2>
+<p>Scheduled cleanup removes a guest account’s online data only when all of these conditions hold: it has no linked Apple identity, no account-data view for over seven days, and no valid account-management sign-in information. Continued provider quota checks alone do not prevent this cleanup.</p>
+<p>This does not mean an account is deleted seven days after a phone is lost. Its server-side sign-in refresh grant can remain valid for a 180-day idle period. Widget or Apple Watch activity can also extend the associated parent grant. Accounts with valid management sign-in information, a linked Apple identity, or a retained monitoring-capacity reservation are excluded from this automatic cleanup.</p>
+<p>A capacity reservation made before purchase has no automatic expiry. It may remain after checkout is canceled, pending, or unfinished. It does not confirm payment or grant subscription access by itself. Ordinary personal accounts can still use Delete account, which removes the account and reservation. After online data is removed, remaining sign-in information and runtime environments are queued for cleanup.</p>
+<h2>Disconnection, deletion, and backups</h2>
+<p>Disconnecting deletes the connection’s online data and revokes UsageWatch access to it. Deleting an account removes its online account data and devices. Sign-out and runtime cleanup that require external services are queued and retried when those services are unavailable.</p>
+<p>Connector sign-out clears the local official sign-in state it uses. It does not guarantee that OpenAI or Anthropic immediately invalidates every credential previously issued everywhere. You can also manage sessions on the provider’s official website.</p>
+<p>Temporary query environments disable automatic filesystem snapshots. Reusable base images contain no user sign-in information. Hosting backups may retain encrypted historical data for the retention period configured by the operator. Deleting online data does not mean immediate removal from every hosting backup. Historical encrypted data expires with the hosting provider’s backup retention. Completed deletions must remain effective if an operator restores a backup.</p>
+<h2>Where data is processed</h2>
+<p>Vercel hosts the UsageWatch API and isolated provider-query environments. Supabase stores the database. Hosting providers process infrastructure data under their own policies.</p>
+<p>If you choose a self-hosted server, the administrator you choose operates that API. The current Claude query environment still uses Vercel Sandbox.</p>
 <h2>Contact</h2>
-<p>Usagewatch is not affiliated with Apple, OpenAI or Anthropic. It contains no advertising or cross-app tracking. For support, privacy inquiries or deletion assistance, email <a href="mailto:previbe.ai@gmail.com">previbe.ai@gmail.com</a>. Do not include access tokens, authorization codes, passwords or private usage exports in support messages.</p>
-</article>
-    <footer><a href="./">UsageWatch</a></footer>
+<p>UsageWatch is not affiliated with Apple, OpenAI, or Anthropic. It contains no advertising or cross-app tracking.</p>
+<p>For support, privacy questions, or deletion assistance, email <a href="mailto:previbe.ai@gmail.com">previbe.ai@gmail.com</a>. Do not send access tokens, authorization codes, passwords, or private usage exports.</p>
+<p>See <a href="./support.html">UsageWatch Help</a>, <a href="./terms-of-use.html">Terms of Use</a>, and <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple’s Standard End User License Agreement</a>.</p>
+</section>
+    </article>
+    <footer><a href="./support.html">使用帮助 / Help</a> · <a href="./privacy-policy.html">隐私政策 / Privacy Policy</a> · <a href="./terms-of-use.html">服务条款 / Terms of Use</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple 标准许可 / Apple Standard EULA</a></footer>
   </main>
 </body>
 </html>
