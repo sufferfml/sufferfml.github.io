@@ -44,7 +44,7 @@
     a { color: var(--accent); text-underline-offset: 0.18em; }
     ul { padding-left: 1.2rem; }
     footer { color: var(--muted); margin-top: 28px; text-align: center; font-size: 0.9rem; }
-  
+
     h3 { color: var(--accent); line-height: 1.3; margin-top: 28px; }
     nav { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 32px; }
     nav a { padding: 4px 0; }
@@ -60,7 +60,7 @@
       <nav aria-label="Language / 语言"><a href="#zh" lang="zh-Hans">中文</a><a href="#en" lang="en">English</a></nav>
 <section id="zh" lang="zh-Hans">
 <h1>UsageWatch 隐私政策</h1>
-<p>最后更新：2026 年 10 月 22 日。本政策说明 UsageWatch 0.2 如何处理通过手机和服务器查询 Codex、Claude Code 额度时产生的数据。</p>
+<p>最后更新：2026 年 10 月 23 日。本政策说明 UsageWatch 0.2 如何处理通过手机和服务器查询 Codex、Claude Code 额度时产生的数据。</p>
 <h2>先了解这几点</h2>
 <ul>
 <li>无需登录 UsageWatch，也能连接服务、订阅和恢复订阅。需要使用服务器功能时，App 会按需创建游客账号。</li>
@@ -96,10 +96,13 @@
 <h2>数据保留多久</h2>
 <ul>
 <li><strong>最近的额度数据：</strong>服务器为每个连接保留最新一份额度数据。</li>
-<li><strong>登录尝试：</strong>Apple 登录验证请求五分钟后到期；服务商登录尝试按官方登录接口给出的时间到期。已到期的登录诊断和提醒记录，由定期清理任务在七天后移除。</li>
+<li><strong>登录尝试：</strong>Apple 登录验证请求五分钟后到期；服务商登录尝试按官方登录接口给出的时间到期。已到期的登录诊断和提醒记录，由定期清理任务在七天后移除。未完成、且没有已保存凭据或额度读数的 Claude 授权，超过十五分钟授权期限后会自动清理并释放监控名额；已成功连接的账号及其记录不会因此删除。</li>
 <li><strong>Codex 用量日历：</strong>保留成功取得的 Codex 主周额度记录，包括所属连接、查询时间、已用百分比、周期标识和重置时间。超过 370 天的记录由定期任务分批移除。</li>
 </ul>
-<p>日历结合额度变化和公开重置公告估算每天的消耗，并显示表情。它不收集工作内容，也不直接测量工作时长。个人日历数据需要账号访问权限，不会发送给第三方重置公告来源，也不会加入普通通知文字。</p>
+<p>日历结合额度变化和公开重置记录估算每天的消耗，分别显示当天用量和重置的表情。它不收集工作内容，也不直接测量工作时长。个人日历数据需要账号访问权限，不会发送给第三方重置公告来源，也不会加入普通通知文字。</p>
+<p>服务器也会比较同一个 Codex 连接先后的额度和备用重置次数，识别这个账号已发生的变化。为避免把同一个服务商账号重复计算为多人，服务器会从已有登录和查询资料中的账号标识生成不可直接还原原标识的摘要，并保存比较所需的套餐类别。该比较基线随连接保存，断开连接时删除。原始登录资料不会进入公开重置记录。</p>
+<p>当多个独立账号出现相符的变化时，UsageWatch 可发布一条系统检测记录，提醒可能发生了公共重置。这是根据观测作出的判断，不是官方公告，也不保证每个账号都已恢复。公开记录只包含变化类型、时间和不含个人数据的说明，不会公开参与账号、身份摘要或个人额度读数。</p>
+<p>用于这项检测的私有变化记录、个人提醒投递和提醒合并记录由定期任务在七天后分批移除。断开连接或删除账号会删除对应的私有检测记录；不含个人数据的公共重置记录可继续保留。你可以在设置中关闭 Codex 重置提醒。</p>
 <p>重新授权会开始一段独立的记录；断开 Codex 或删除 UsageWatch 账号会删除对应的在线历史。过去没有取得数据的日期无法补回。</p>
 <h2>长期未使用的游客账号</h2>
 <p>只有同时满足以下条件，定期清理任务才会移除游客账号的在线数据：尚未绑定 Apple、超过七天没有查看账号数据，并且没有有效的账号管理登录信息。仅有服务器持续查询额度，不会阻止这类清理。</p>
@@ -121,7 +124,7 @@
 <hr>
 <section id="en" lang="en">
 <h1>UsageWatch Privacy Policy</h1>
-<p>Last updated: October 22, 2026. This policy explains how UsageWatch 0.2 handles data when your phone and our server check Codex and Claude Code quotas.</p>
+<p>Last updated: October 23, 2026. This policy explains how UsageWatch 0.2 handles data when your phone and our server check Codex and Claude Code quotas.</p>
 <h2>At a glance</h2>
 <ul>
 <li>You can connect services, subscribe, and restore a subscription without signing in to UsageWatch. The app creates a guest account when a server feature needs one.</li>
@@ -157,10 +160,13 @@
 <h2>How long data is kept</h2>
 <ul>
 <li><strong>Latest quota data:</strong> The server keeps the latest quota data for each connection.</li>
-<li><strong>Sign-in attempts:</strong> Apple sign-in challenges expire after five minutes. Provider attempts expire at the time returned by the official sign-in endpoint. Expired diagnostic sign-in and alert records are removed after seven days by scheduled cleanup.</li>
+<li><strong>Sign-in attempts:</strong> Apple sign-in challenges expire after five minutes. Provider attempts expire at the time returned by the official sign-in endpoint. Expired diagnostic sign-in and alert records are removed after seven days by scheduled cleanup. An unfinished Claude sign-in with no saved credentials or quota readings is automatically removed after its 15-minute authorization window, releasing its monitor slot. Previously connected accounts and their records are retained.</li>
 <li><strong>Codex usage calendar:</strong> The server keeps successfully collected Codex main-weekly-quota observations, including the connection, query time, used percentage, window identifier, and reset time. Scheduled cleanup removes observations older than 370 days in batches.</li>
 </ul>
-<p>The calendar combines quota changes and public reset announcements to estimate daily consumption and show an emoji. It does not collect work content or directly measure working hours. Personal calendar data requires account access, is not sent to the third-party reset feed, and is not included in ordinary notification text.</p>
+<p>The calendar combines quota changes and public reset records to estimate daily consumption, with separate emojis for daily use and resets. It does not collect work content or directly measure working hours. Personal calendar data requires account access, is not sent to the third-party reset feed, and is not included in ordinary notification text.</p>
+<p>The server also compares successive quota and saved-reset counts for the same Codex connection to identify changes that have occurred on that account. To avoid counting one provider account as several people, it derives a one-way digest from account identifiers already present in sign-in and query data, and stores the plan category needed for comparison. This comparison baseline is kept with the connection and removed when you disconnect it. Raw sign-in information is not included in public reset records.</p>
+<p>When several independent accounts show matching changes, UsageWatch may publish a system-detected record about a possible public reset. This is an inference from observations, not an official announcement, and does not guarantee that every account has recovered. Public records contain only the change type, time, and a description without personal data. They do not disclose participating accounts, identity digests, or individual quota readings.</p>
+<p>Scheduled cleanup removes private change observations, personal notification deliveries, and notification-merging records older than seven days in batches. Disconnecting a connection or deleting an account removes its related private detection records. Public reset records without personal data may be retained. You can turn off Codex reset alerts in Settings.</p>
 <p>Reauthorizing starts a separate history segment. Disconnecting Codex or deleting the UsageWatch account deletes its related online history. Past dates without collected data cannot be reconstructed.</p>
 <h2>Guest accounts left unused</h2>
 <p>Scheduled cleanup removes a guest account’s online data only when all of these conditions hold: it has no linked Apple identity, no account-data view for over seven days, and no valid account-management sign-in information. Continued provider quota checks alone do not prevent this cleanup.</p>
