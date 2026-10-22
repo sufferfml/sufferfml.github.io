@@ -27,7 +27,7 @@ Codex 用量日历结合额度变化与第三方重置公告估算每天消耗�
 
 当前不支持同一服务的两个账号。暂停监控会保留该连接的登录授权，之后可重新选择监控；可以同时监控的数量仍受当前方案限制。
 
-App Store 订阅适用于 UsageWatch 官方服务，不适用于自建服务器。当账号仍可免费使用时，不需要订阅。是否可以购买，以当前服务状态和 App Store 的商品显示为准；订阅目前面向中国大陆以外的可售地区。
+App Store 订阅适用于 UsageWatch 官方服务，不适用于自建服务器。账号有免费使用权限时，可以在有效期内继续监控，也可以主动订阅。是否可以购买，以当前服务状态和 App Store 的商品显示为准；订阅目前面向中国大陆以外的可售地区。付款前仍会检查实际可用的云端监控名额；如果容量确已用完，需要稍后再试。
 
 ## 月费与首发优惠
 
@@ -35,7 +35,15 @@ App Store 订阅适用于 UsageWatch 官方服务，不适用于自建服务器�
 
 首发优惠由运营者稍后手动结束，目前没有预设结束日期。优惠期间订阅，活动结束后仍按适用的优惠价续费。取消后重新订阅或更换方案时，以 Apple 显示的价格和规则为准。
 
-## 7 天免费试用与自动续费
+## 既有账号的 7 天赠送
+
+收费切换时，符合条件、尚未订阅的既有 UsageWatch 账号可获一次 7 天免费赠送。资格在切换时确定，开始和结束时间以 App 显示为准。这段期限固定，不会因重新打开 App 或恢复连接而延长。
+
+赠送由 UsageWatch 提供，不会创建 App Store 订阅，也不会自动扣费。赠送期间可以主动订阅 Solo 或 Duo，购买仍需在 Apple 付款页确认。有效的 Apple 订阅优先提供监控权限；Apple 的免费试用资格与这次赠送分别判断。
+
+赠送到期且没有有效订阅时，自动查询会暂停，旧免费连接占用的可释放监控名额会收回；购买流程中仍有效的预留不属于这类旧名额。暂停本身不会删除账号、已保存的登录信息或历史记录，原有的数据保留和删除规则仍适用。继续监控需要订阅。
+
+## App Store 7 天免费试用与自动续费
 
 符合资格的订阅可免费试用 7 天，资格由 Apple 确定。同一 Apple 账户在 Solo 和 Duo 之间共用一次试用资格，更换方案不会再获得一次试用。
 
@@ -100,7 +108,7 @@ You can link a guest account to Apple later and keep its connections and history
 
 Two accounts from the same service are not supported yet. Pausing monitoring keeps the connection’s sign-in authorization so you can choose it again later. The number monitored at once still follows your current plan.
 
-App Store subscriptions work with the official UsageWatch service, not custom servers. Accounts that currently have free access do not need a subscription. Purchasing depends on the current service state and the products shown by the App Store. Subscriptions are currently offered in available regions outside mainland China.
+App Store subscriptions work with the official UsageWatch service, not custom servers. Accounts with free access can keep monitoring until that access ends and can also choose to subscribe. Purchasing depends on the current service state and the products shown by the App Store. Subscriptions are currently offered in available regions outside mainland China. Available cloud-monitoring capacity is still checked before purchase. If it is full, you will need to try again later.
 
 ## Monthly prices and launch offer
 
@@ -108,7 +116,15 @@ US launch prices are US$1.99 a month for Solo, with an original price of US$6, a
 
 The launch offer will be ended manually later and currently has no scheduled end date. Subscribe during the offer to keep the applicable offer renewal price after it ends. If you cancel and resubscribe or change plans, Apple’s displayed price and rules apply.
 
-## Seven-day free trial and automatic renewal
+## Seven free days for existing accounts
+
+When paid access starts, eligible existing UsageWatch accounts without a subscription can receive seven free days once. Eligibility is determined at the switch. Check the app for the start and end times. This is a fixed period; reopening the app or restoring a connection does not extend it.
+
+UsageWatch provides these free days. They do not create an App Store subscription or charge you automatically. You can choose Solo or Duo during this period, with a purchase still requiring confirmation through Apple. An active Apple subscription takes priority for monitoring access. Apple’s free-trial eligibility is determined separately from this gift.
+
+When the gift ends without an active subscription, automatic quota checks pause and releasable monitoring places held for old free connections are returned to the available pool. Valid reservations made during purchase are not part of that old pool. Pausing itself does not delete your account, saved sign-in information, or history; the existing data-retention and deletion rules still apply. A subscription is needed to continue monitoring.
+
+## App Store seven-day free trial and automatic renewal
 
 Eligible subscribers can receive seven days free. Apple determines eligibility. Solo and Duo share one trial per Apple Account; changing plans does not start another trial.
 

@@ -14,6 +14,8 @@
 
 服务器会处理你的 UsageWatch 账号标识、设备连接及名称、额度百分比、重置时间、查询时间，以及用于向设备发送通知的登记信息。这些数据与 UsageWatch 账号关联，用来在你的设备之间同步额度。
 
+为管理监控权限，服务器还会保存免费赠送资格、赠送开始和结束时间，以及监控名额的预留记录。这些记录用于确认可用的监控权限、显示赠送期限及管理可用名额，不用于广告。
+
 你可以在欢迎页跳过登录。跳过这一步本身不会创建服务器账号；首次连接 Codex 或 Claude，或进行购买、恢复订阅等需要账号的操作时，App 会按需准备游客账号。
 
 只有在你选择使用 Apple 账号登录 UsageWatch 或绑定游客账号时，我们才会处理用于该登录的 Apple 账号标识。App Store 购买和恢复使用的交易验证是另一项操作，见下方“购买与恢复订阅”。
@@ -74,6 +76,8 @@ Claude 连接不需要读取或导入你的 Mac 文件、钥匙串、对话、�
 
 购买开始前的容量预留记录不会自动到期。即使购买被取消、等待批准或尚未完成，该记录也可能保留；它不代表已经付款，也不会单独授予订阅权限。普通个人账号仍可通过“删除账号”移除账号及其预留记录。在线数据移除后，剩余登录信息和运行环境会进入清理队列。
 
+符合条件、尚未订阅的既有账号可在收费切换时获得一次固定 7 天的免费赠送，实际期限以 App 显示为准。这不是 App Store 订阅，不会自动扣费。赠送到期且没有有效 Apple 订阅时，服务器可暂停监控，并收回仅为旧免费连接预留的可释放名额；购买流程中仍有效的预留不受这项回收影响。暂停或收回名额本身不会删除账号、已保存的登录信息或历史记录，也不改变本政策中的其他数据保留和删除规则。
+
 ## 断开连接、删除与备份
 
 断开连接会删除该连接的在线数据，并撤销 UsageWatch 对该连接的访问。删除账号会移除账号的在线数据和设备。需要在外部服务中完成的登录退出或运行环境清理，会排队执行；外部服务暂不可用时会重试。
@@ -113,6 +117,8 @@ Last updated: October 22, 2026. This policy explains how UsageWatch 0.2 handles 
 ## Account and device data
 
 The server processes your UsageWatch account identifier, device connections and names, quota percentages, reset times, query times, and the registration information needed to send notifications to your devices. This data is linked to your UsageWatch account to keep your devices in sync.
+
+To manage monitoring access, the server also stores eligibility for free monitoring gifts, their start and end times, and monitoring-capacity reservation records. These records establish available monitoring access, show the gift period, and manage available places. They are not used for advertising.
 
 You can skip sign-in on the welcome screen. Skipping alone does not create a server account. The app prepares a guest account when you first connect Codex or Claude, or take an account-dependent action such as purchasing or restoring a subscription.
 
@@ -173,6 +179,8 @@ Scheduled cleanup removes a guest account’s online data only when all of these
 This does not mean an account is deleted seven days after a phone is lost. Its server-side sign-in refresh grant can remain valid for a 180-day idle period. Widget or Apple Watch activity can also extend the associated parent grant. Accounts with valid management sign-in information, a linked Apple identity, or a retained monitoring-capacity reservation are excluded from this automatic cleanup.
 
 A capacity reservation made before purchase has no automatic expiry. It may remain after checkout is canceled, pending, or unfinished. It does not confirm payment or grant subscription access by itself. Ordinary personal accounts can still use Delete account, which removes the account and reservation. After online data is removed, remaining sign-in information and runtime environments are queued for cleanup.
+
+When paid access starts, eligible existing accounts without a subscription can receive a fixed gift of seven free days once. Check the app for the actual period. This does not create an App Store subscription or charge you automatically. When the gift ends without an active Apple subscription, the server may pause monitoring and release places held only for old free connections. Valid reservations made during purchase are not affected by this release. Pausing monitoring or releasing a place does not itself delete your account, saved sign-in information, or history, or change the other data-retention and deletion rules in this policy.
 
 ## Disconnection, deletion, and backups
 
